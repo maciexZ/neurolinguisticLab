@@ -1,0 +1,9 @@
+[Unit]
+Description=Check the data directory
+
+[Service]
+Type=simple
+ExecStart=/home/myserver/bin/neuroling.sh
+
+[Install]
+WantedBy=multi-user.target
