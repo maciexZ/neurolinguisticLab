@@ -17,7 +17,7 @@ client = speech_v1.SpeechClient(credentials=credentials)
 ### looking for audio files in directory
 def pathToAudio(PATH, extension='wav'):
     """
-    searching for audiofiles in PATH directory
+     searching for audiofiles in PATH directory
     :param PATH: path to directory
     :param extension: audiofile etension, wav or flac
     :return: list of strings - paths to audiofiles
