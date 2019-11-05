@@ -7,7 +7,7 @@ Example of usage:
 A data set from an expriment: picture naming. 
 
 For the convenience of the reserchers, script runs in a docker on the server. The users only need to upload the files via Nextcloud. 
-System's timer and service are checking the upload directory and run the script whenever .wav files are detected. 
+Systemd path and systemd service are checking the upload directory and run the script whenever .wav files are detected. 
 
 Importing, preparing container for the results
 ```
