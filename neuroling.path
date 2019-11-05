@@ -1,0 +1,8 @@
+[Unit]
+Description=Path to observed directory FOKUS/ENG
+
+[Path]
+DirectoryNotEmpty=/home/myserver/data/FOKUS/ENG/
+
+[Install]
+WantedBy=default.target

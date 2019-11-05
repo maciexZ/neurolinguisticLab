@@ -1,9 +1,7 @@
 [Unit]
-Description=Check the data directory
+Description=Launch the speech-to-text  
 
 [Service]
 Type=simple
 ExecStart=/home/myserver/bin/neuroling.sh
 
-[Install]
-WantedBy=multi-user.target
