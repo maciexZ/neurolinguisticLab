@@ -28,7 +28,7 @@ Actual speech-to-text processing.
 ```
 for audiopath in audiopaths:
     try:
-        response = readAudioCloud(audiopath, language='pl-PL',chanels=2)
+        response = readAudioCloud(audiopath, language='pl-PL')
         singleWordWithTime(response,audiopath,dataFrameResults)
         dataFrameResults.to_excel('badanie.xlsx')
     except Exception as e:
