@@ -6,6 +6,7 @@ import os
 from google.cloud import speech_v1
 from google.cloud.speech_v1 import types,enums
 from google.oauth2 import service_account
+from audiofile import  channels
 
 # api key from google cloud
 credentials = service_account.Credentials.from_service_account_file(
@@ -64,7 +65,7 @@ def read_WAV(audiopath, language='en-US'):
 
 ### sending to google cloud with credentials
 ### paid option, better accuracy
-def readAudioCloud(audiopath, language='en-USA', extension='wav', chanels=1):
+def readAudioCloud(audiopath, language='en-USA', extension='wav'):
     """
     sending to google cloud
     :param audiopath: string path to audiofile
@@ -74,6 +75,7 @@ def readAudioCloud(audiopath, language='en-USA', extension='wav', chanels=1):
     :return: response object from google cloud
     """
     with io.open(audiopath, 'rb') as audio_file:
+        chanels = channels(audiopath)
         content = audio_file.read()
         audio = types.RecognitionAudio(content=content)
         config = types.RecognitionConfig(
