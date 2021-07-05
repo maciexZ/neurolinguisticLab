@@ -12,7 +12,7 @@ WORKDIR /root
 
 #jeżeli zmienisz fokus.py to trzeba budować od nowa
 COPY fokus.py . 
-#uwaga delikatne - usuwać po wykorzystaniu
+#key
 COPY scienceAgata-67f0c7478515.json .
 
 COPY __init__.py .
